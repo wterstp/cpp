@@ -56,7 +56,9 @@ void test0() {
 };
 
 int main() {
+  time_t start = time(NULL);
   test0();
-
+  time_t end = time(NULL) - start;
+  cout << end << "s" << endl;
   return 0;
 }
