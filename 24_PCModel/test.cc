@@ -6,7 +6,7 @@
 #include <memory>
 using namespace std;
 
-void test0() {
+void test1() {
   TaskQueue taskQue(10);
 
   unique_ptr<Thread> pro(new Producer(taskQue));
@@ -19,7 +19,7 @@ void test0() {
   con->stop();
 }
 int main() {
-  test0();
+  test1();
 
   return 0;
 }
