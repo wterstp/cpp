@@ -44,3 +44,12 @@ void Acceptor::listen() {
 }
 
 int Acceptor::fd() const { return _sock.fd(); }
+
+int Acceptor::accept() {
+  int connfd = ::accept(_sock.fd(), nullptr, nullptr);
+  if (-1 == connfd) {
+    perror("accept");
+    return -1;
+  }
+  return connfd;
+}

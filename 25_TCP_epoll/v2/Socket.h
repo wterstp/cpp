@@ -1,6 +1,5 @@
-// header_template.h
-#ifndef SOCKET_H
-#define SOCKET_H
+#ifndef __SOCKET_H__
+#define __SOCKET_H__
 
 #include "NonCopyable.h"
 
@@ -16,4 +15,4 @@ private:
   int _fd;
 };
 
-#endif /* SOCKET_H */
+#endif
